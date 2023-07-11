@@ -1,0 +1,90 @@
+.container {
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 6rem;
+}
+
+.header-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.header-btn a {
+  font-size: 1.2rem;
+}
+
+.header-btn--left a:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.flexify-td {
+  display: flex !important;
+  align-items: center;
+}
+
+.flexify-td td {
+  border: none;
+}
+
+.flexify-td td {
+  border-right: 1px solid #ccc;
+  height: 100%;
+}
+
+#actions {
+  display: flex;
+  gap: 1rem;
+}
+
+a {
+  display: inline-block;
+  position: relative;
+}
+
+a.Attente.client::after {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--error);
+}
+a.cours.power::after,
+a.cours.admin::after {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--error);
+}
+
+
+
+a[class*='Clotur'] {
+  display: none;
+}
+
+a.update.power , a.update.admin {
+  display: none;
+}
+
+
+@media (max-width: 724px) {
+  .header-btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .header-btn--left {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    margin-bottom: 0.5rem;
+  }
+  .header-btn--left a:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+}

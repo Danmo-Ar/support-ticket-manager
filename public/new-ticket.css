@@ -1,0 +1,138 @@
+.container {
+  background-color: var(--white);
+  height: 100%;
+  /* padding: 5rem; */
+  padding-top: 0.3rem;
+  border-radius: 1rem;
+
+  max-width: 100rem;
+  width: 100%;
+  margin: 6rem auto;
+}
+
+.container h3 {
+  margin: 2rem 0 2rem 2rem;
+
+  font-size: 1.5rem;
+  color: var(--secondary);
+}
+
+.table-style,
+.table-style th,
+.table-style td {
+  /* border: 1px solid #e5e5e5; */
+  border-collapse: collapse !important;
+}
+
+.table-style textarea {
+  width: 100%;
+}
+
+.table-style tr:not(:last-child) {
+  border-bottom: 1px solid #e5e5e5;
+  height: 100%;
+}
+.table-style td:not(:last-child) {
+  border-right: 1px solid #e5e5e5;
+}
+
+.table-style {
+  border-radius: 1rem;
+  border: 1px solid #e5e5e5;
+  background-color: var(--white);
+
+  box-shadow: 0 5px 50px rgba(0, 0, 0, 0.15);
+
+  cursor: pointer;
+
+  margin: 0px auto;
+
+  display: block;
+}
+.table-style tbody {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.table-style tr {
+  display: flex;
+}
+
+.table-style tr td {
+  height: auto;
+
+  display: block;
+  flex: 3;
+}
+
+.table-style tr,
+.table-style td {
+  /* width: 100%; */
+  height: 100%;
+}
+
+.table-style th,
+.table-style td {
+  padding: 10px 10px;
+
+  text-align: left;
+  font-weight: 700;
+  vertical-align: unset;
+}
+
+.table-style tr td select {
+  width: 100%;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.table-style tr td textarea {
+  padding: 1rem 0 0 1rem;
+  border: none;
+  font-size: 1.4rem;
+}
+
+.table-style tr td textarea:focus {
+  border: none;
+  outline: none;
+}
+.table-style tr td input {
+  padding: 1rem;
+  border: none;
+}
+
+.table-style tr td input:focus {
+  border: none;
+  outline: none;
+}
+
+.table-style .table-label {
+  flex: 2;
+  font-size: 1.3rem;
+}
+
+.text {
+  width: 460px;
+  height: 250px;
+}
+.last-btn {
+  text-align: center !important;
+}
+
+@media (max-width: 970px) {
+  .container {
+    margin: 3rem auto;
+  }
+}
+
+@media (max-width: 870px) {
+  .container {
+    padding: 0 2rem 0 2rem !important;
+  }
+  .container h3 {
+    font-size: 1.3rem !important;
+    padding-top: 1.5rem !important;
+  }
+}

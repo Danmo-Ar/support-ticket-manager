@@ -1,0 +1,66 @@
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+pre {
+  white-space: pre-wrap;
+  font-size: 1.3rem;
+}
+
+.table-style tr {
+
+  display: block;
+
+}
+
+.table-style tbody .libelle {
+  font-weight: 400;
+  font-size: 1.3rem;
+  flex: 5;
+}
+.table-style tbody .libelle.toupdate {
+   display: none;
+}
+
+.table-style tbody .libelle.modifier {
+   color: var(--light-grey);
+}
+.table-style tbody .libelle.consulter ,.table-style tbody .libelle.discussion  {
+   display: block;
+}
+
+
+
+.table-style tbody .consulter,.table-style tbody .discussion {
+   display: none;
+}
+
+
+
+.middle {
+  background-color: #f1f1f1;
+}
+
+.small {
+  height: 100% !important;
+}
+
+@media (max-width: 970px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 870px) {
+  .container div {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .container h3 {
+    font-size: 1.1rem !important;
+    text-align: center;
+  }
+}
