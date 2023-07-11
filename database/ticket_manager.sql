@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 11 juil. 2023 à 12:32
+-- Généré le : mar. 11 juil. 2023 à 13:57
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.0.28
 
@@ -224,6 +224,12 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT pour la table `clients`
 --
 ALTER TABLE `clients`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `message`
+--
+ALTER TABLE `message`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
