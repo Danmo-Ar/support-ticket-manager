@@ -46,24 +46,23 @@ if (!empty($_POST)) {
         if (empty($file)) {
             $file = "";
         } else {
-
+            echo $fileExtension;
             if ($fileExtension != 'jpg' && $fileExtension != 'png' && $fileExtension != 'jpeg' && $fileExtension != 'pdf') //verifier l'extension du fichier uploader
             {
                 $fileErr = "les extensions autorisées sont : .jpg , .jpeg , .png, .pdf";
                 $IsSuccess = false;
             }
-            if (file_exists($filepath)) //verifier si un fichier existe
-            {
-                $fileErr = "ce fichier existe déja";
-                $IsSuccess = false;
-            }
-            if ($_FILES['file']['size'] > 500000) {
-                $fileErr = "la taille du fichier ne dois pas depasser 500ko";
+            if ($_FILES['file']['size'] > 1000000) {
+                $fileErr = "la taille du fichier ne dois pas depasser 1mb";
                 $IsSuccess = false;
             }
             if ($IsSuccess) {
-                if (!move_uploaded_file($_FILES['file']['tmp_name'], $filepath)) {
-                    $fileErr = "la taille du fichier ne dois pas depasser 500ko";
+                $temp = explode(".", $file);
+                $newfilename =  date('YmdHis') . '.' . end($temp);
+                $file = $file . $newfilename;
+                if (!move_uploaded_file($_FILES['file']['tmp_name'], '../files/' . $file)) {
+                    $fileErr = "la taille du fichier ne dois pas depasser 1mb";
+
                     $IsSuccess = false;
                 }
             }
